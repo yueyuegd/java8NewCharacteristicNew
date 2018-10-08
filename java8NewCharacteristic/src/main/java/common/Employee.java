@@ -6,6 +6,7 @@ public class Employee {
 
     private String name;
     private Integer age;
+    private Status status;
     private Double salary;
 
     public String getName() {
@@ -32,6 +33,14 @@ public class Employee {
         this.salary = salary;
     }
 
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
     public Employee() {
     }
 
@@ -41,11 +50,19 @@ public class Employee {
         this.salary = salary;
     }
 
+    public Employee(String name, Integer age, Status status, Double salary) {
+        this.name = name;
+        this.age = age;
+        this.status = status;
+        this.salary = salary;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                ", status=" + status +
                 ", salary=" + salary +
                 '}';
     }
@@ -63,5 +80,9 @@ public class Employee {
     @Override
     public int hashCode() {
         return Objects.hash(name, age, salary);
+    }
+
+    public enum Status{
+        FREE,BUSY,VOCATION
     }
 }

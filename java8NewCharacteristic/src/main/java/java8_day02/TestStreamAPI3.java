@@ -13,7 +13,7 @@ import java.util.stream.Stream;
  * Stream中间操作：
  * 映射：
  * 1.map-接收Lambda，将其元素转换成其他形式或提取信息，接收一个函数作为参数，
- * 改函数会应用到每个元素上，并将其映射成一个新的元素。
+ * 该函数会应用到每个元素上，并将其映射成一个新的元素。
  * 2.flatMap-接收一个函数作为参数，将流中的每个值换成另一个流，然后把所有的流连接成一个流
  */
 public class TestStreamAPI3 {
